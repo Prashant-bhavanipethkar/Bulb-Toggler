@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasons</title>
+</head>
+
+<style>
+
+   .container{
+    background-color:   #ffeb99;
+    margin: 0px auto;
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    
+   }
+
+   #sun{
+    height: 200px;
+    display: block;
+    margin: 60px auto;
+   }
+
+   #header{
+    text-align: center;
+    padding-top: 20px;
+   }
+
+   .btn-container{
+     width: 650px;
+     height: 40px;
+     justify-content: space-around;
+     position: relative;
+     top: -100px;
+     right: -500px;
+     
+   }
+
+   .btn{
+    margin-left: 30px;
+    border: none;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+   }
+
+   #header{
+    color: #004080;
+   }
+
+   #summer{
+    background-color: white;
+   }
+
+
+   #summer:hover{
+    background-color: #ff9900;
+    color: white;
+   }
+
+   #winter{
+    background-color: white;
+   }
+
+   #winter:hover{
+    background-color:  #3366cc;
+    color: white;
+   }
+
+   #mansoon{
+    background-color: white;
+   }
+
+   #mansoon:hover{
+    background-color:   #ff0066;
+    color: white;
+   }
+
+
+</style>
+
+<body>
+
+    <div class="container" id="container">
+        <h1 id="header">Summer</h1>
+        <img src="./Images/sun.png" alt="sun" id="sun"> <br>
+
+    </div>
+
+    <div class="btn-container" id="btn-container">
+
+        <button type="button" class="btn" id="summer" onclick="summer()">Summer</button>
+        <button type="button" class="btn" id="winter" onclick="winter()">Winter</button>
+        <button type="button" class="btn" id="mansoon" onclick="mansoon()">Mansoon</button>
+
+    </div>
+
+    <script>
+
+        function winter() {
+            const imgElement = document.getElementById('sun');
+            const headerElement = document.getElementById('header');
+            const containerElement = document.getElementById('container')
+            imgElement.src = "./Images/jacket.png";
+            headerElement.innerText = 'Winter'
+            containerElement.style.backgroundColor = '#80aaff';
+        }
+
+        function mansoon() {
+            const imgElement = document.getElementById('sun');
+            const headerElement = document.getElementById('header');
+            const containerElement = document.getElementById('container')
+            imgElement.src = "./Images/umbrella.png";
+            headerElement.innerText = 'Mansoon'
+            containerElement.style.backgroundColor = '#ff6699';
+            
+        }
+
+        function summer() {
+            const imgElement = document.getElementById('sun');
+            const headerElement = document.getElementById('header');
+            const containerElement = document.getElementById('container')
+            imgElement.src = "./Images/sun.png";
+             headerElement.innerText = 'Summer'
+             containerElement.style.backgroundColor = ' #ffe699';
+        }
+
+        
+
+    </script>
+
+
+
+</body>
+
+</html>
